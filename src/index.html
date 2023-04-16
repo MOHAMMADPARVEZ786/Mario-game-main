@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Get Back Home</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .start{
+      position: fixed;
+        background-color: rgba(25, 25, 25, 0.5);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-items: center;
+        z-index: 2;
+      }
+      #fullscreen{
+        height:100vh;
+        width: 100vw;
+      }
+      .invisible {
+        display: none;
+      }
+      .startbutton{
+        display: block; margin: auto;
+        height:100px;width: 200px;
+         border-radius: 16px;
+         font: 30px Arial, sans-serif;
+         background: #124552;
+        color: #58bab3;
+      }
+      .startbutton:hover{
+        background: #2da0bd;
+        color: #15312f;
+      }
+      canvas{
+        position: fixed;
+        z-index: 0;
+        height: 100%;
+        margin: auto;
+        top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+      #con{
+        z-index: 1;
+      }
+      .control{
+        background-color: red;
+        height:100px;
+        width: 100px;
+      }
+      #controls{
+        z-index: 4;
+        display: none;
+        position: absolute;
+        right: 20px;
+        bottom:20px;
+      
+        width: 100%;
+        height: 100px;
+      
+      }
+      #controls.visible{
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        canvas {
+          width: 100%;
+          height: auto;
+        }
+        .startbutton{
+          display: none;
+        }
+
+      }
+    </style>
+</head>
+  <body>
+    
+    <div class="start">
+      <button class="startbutton">
+        Start Game
+      </button>
+    </div>
+    <div id="fullscreen">
+    <canvas></canvas>
+    <canvas id="con"></canvas>
+    <div id="controls">
+      <div class="control" id="up">
+
+      </div>
+      <div class="control" id="left">
+
+      </div>
+      <div class="control" id="right">
+
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
